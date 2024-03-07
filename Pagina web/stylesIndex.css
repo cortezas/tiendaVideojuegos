@@ -1,0 +1,629 @@
+body {
+    margin: 0;
+    padding: 0;
+    zoom: 0.7;
+}
+
+header {
+    background-color: #212729;
+    width: 100%;
+    display: flex;
+    /* Para alinear los elementos horizontalmente */
+    align-items: center;
+    /* Para alinear verticalmente los elementos */
+    justify-content: space-between;
+    /* Para distribuir los elementos horizontalmente */
+    padding: 20px;
+    /* Añadir espacio alrededor del contenido */
+    box-sizing: border-box;
+    /* Incluir el relleno y el borde en el ancho total del elemento */
+}
+
+
+h1 {
+    font-family: 'McLaren';
+    font-size: 36px;
+    color: #4dd7fa;
+    margin: 0;
+    /* Eliminar el margen predeterminado del h1 */
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 32px;
+    margin: 50px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 100px;
+    /* Ancho de la imagen del logo */
+    margin-right: 20px;
+    /* Espacio entre la imagen del logo y el texto */
+}
+
+#nav {
+    width: 100%;
+    height: 55px;
+    border-collapse: collapse;
+}
+
+#nav tr th {
+    width: 20%;
+    border: 1px solid black;
+    font-family: 'Poppins';
+    background-color: #e6e6e6;
+}
+
+#nav tr th:hover {
+    background-color: #aaaaaa;
+}
+
+#slider {
+    width: 100%;
+    /* Ajusta el ancho máximo del slider */
+    border: 1px solid black;
+    max-height: 350px;
+    /* Ajusta la altura del slider */
+    position: relative;
+}
+
+#slider img {
+    width: 100%;
+    /* Ocupa el 100% del ancho de la sección */
+    height: 100%;
+    /* Ocupa el 100% del alto de la sección */
+    object-fit: cover;
+    /* Escala la imagen para cubrir el contenedor manteniendo la relación de aspecto */
+}
+
+.header-buttons {
+    display: flex;
+    /* Para alinear los elementos horizontalmente */
+}
+
+.header-buttons input[type="text"] {
+    margin-right: 100px;
+    /* Añadir espacio entre la barra de búsqueda y los botones */
+    width: 400px;
+    border-radius: 30px;
+}
+
+.header-buttons button {
+    padding: 10px 20px;
+    /* Añadir relleno a los botones */
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 60px;
+}
+
+.header-buttons button:hover {
+    background-color: #35b2d3;
+}
+
+.icon-button {
+    position: relative;
+    width: 40px;
+    /* Ancho del botón */
+    height: 40px;
+    /* Alto del botón */
+    border: none;
+    background-color: transparent;
+}
+
+.icon-button img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ancho de la imagen igual al ancho del botón */
+    height: 100%;
+    /* Alto de la imagen igual al alto del botón */
+}
+
+#avatar img {
+    z-index: 1;
+    /* Asegura que la imagen esté encima del botón */
+}
+
+#cart img {
+    z-index: 1;
+    /* Asegura que la imagen esté encima del botón */
+}
+
+/* Estilo básico para la galería */
+figure {
+    margin: 0;
+}
+
+#gallery {
+    max-width: 350px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Navegación de la galería */
+.gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-button>span {
+    font-size: 30px;
+}
+
+#tablaNovedades {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #fef8e8;
+}
+
+#tablaNovedades tr td {
+    font-family: 'Poppins';
+    font-size: 16px;
+    width: 20%;
+}
+
+#tablaNovedades tr td img {
+    width: 159px;
+    height: 260px;
+}
+
+#tablaReservas {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+    background-color: #e4faff;
+}
+
+#tablaReservas tr td {
+    font-family: 'Poppins';
+    font-size: 16px;
+    width: 20%;
+}
+
+#tablaReservas tr td img {
+    width: 159px;
+    height: 260px;
+}
+
+#tablaReservas tr td:hover {
+    background-color: #929292;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añadir sombra */
+    color: #fff;
+    /* Cambiar el color del texto */
+    transform: scale(1.05);
+    /* Ajustar la escala */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
+    /* Agregar transición */
+}
+
+#contenidoFooterPrimero {
+    display: flex;
+    margin-right: 20px;
+    /* Agrega un margen a la derecha para separar del siguiente contenido */
+    align-items: center;
+    justify-content: center;
+    /* Centrar horizontalmente */
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #929292;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    text-align: center;
+    /* Centrar el contenido dentro del footer */
+}
+
+footer p {
+    font-family: "Poppins";
+    color: #ebebeb;
+    margin: 15px;
+    /* Ajuste para evitar espacios innecesarios */
+}
+
+/* Estilo para el botón y el campo de texto en el footer */
+footer input[type="text"],
+footer button {
+    font-family: "Poppins";
+    padding: 10px 20px;
+    font-size: 16px;
+    max-width: 200px;
+    /* Ajusta el ancho máximo del botón */
+    border: 1px solid #4dd7fa;
+}
+
+
+#tablaFooter {
+    margin-top: 20px;
+    /* Agrega margen superior para separar del contenido anterior */
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    width: 80%;
+    margin: auto;
+    border-top: 1px solid black;
+}
+
+#tablaFooter table {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    max-width: 800px;
+    /* Establece un ancho máximo */
+}
+
+#tablaFooter th {
+    padding: 10px;
+    /* Ajusta el padding de los th */
+    width: 33%;
+}
+
+#tablaFooter p {
+    margin: 20px;
+    /* Elimina el margen de los párrafos dentro del th */
+    font-family: "Poppins";
+    /* Utiliza la fuente Poppins */
+    color: #ffffff;
+    /* Cambia el color del texto */
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+}
+
+
+
+/* Añadir un poco de espacio entre las celdas */
+#tablaCesta td,
+#tablaCesta th {
+    padding: 12px;
+}
+
+/* Hover sobre las filas */
+#tablaCesta tr:hover {
+    background-color: #e1f5fe;
+    /* Cambia el color al pasar el ratón */
+    transition: background-color 0.3s ease;
+    /* Agrega una transición suave */
+}
+
+#pedidosCliente table {
+    margin: auto;
+    width: 70%;
+    padding: 50px;
+}
+
+
+#merchandisingSection {
+    padding: 26px;
+    display: flex;
+    justify-content: space-around;
+    /* Distribuye los elementos de manera uniforme */
+    align-items: center;
+    /* Alinea los elementos verticalmente */
+}
+
+#merchandisingSection p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+
+#merchandisingSection tr td img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    /* Para permitir que la imagen se ajuste proporcionalmente */
+    height: auto;
+    /* Para permitir que la imagen se ajuste proporcionalmente */
+}
+
+#merchandisingSection table {
+    height: 500px;
+    width: 100%;
+    background-color: #212729;
+}
+
+#merchandisingSection h2 {
+    color: #4dd7fa;
+    margin-bottom: 60px;
+    text-align: left;
+    margin-left: 150px;
+}
+
+#merchandisingSection button {
+    background-color: #4dd7fa;
+    display: block;
+    margin-left: 150px;
+    margin-bottom: 60px;
+    padding: 15px 30px;
+}
+
+#merchandisingSection table img:hover {
+    background-color: rgba(84, 81, 81, 0.5);
+    /* Fondo transparente al pasar el ratón */
+}
+
+.image-container {
+    width: 250px;
+    /* Define el ancho deseado para el contenedor */
+    height: 250px;
+    /* Define la altura deseada para el contenedor */
+    position: relative;
+    /* Permite posicionar el fondo transparente relativo al contenedor */
+    display: flex;
+    /* Utiliza el modelo de caja flexible */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+}
+
+.image-container img {
+    width: 100%;
+    /* Hace que la imagen ocupe todo el espacio disponible dentro del contenedor */
+    height: 100%;
+    /* Hace que la imagen ocupe todo el espacio disponible dentro del contenedor */
+    object-fit: contain;
+    /* Mantiene la relación de aspecto de la imagen sin distorsionarla */
+}
+
+.image-container:hover::after {
+    content: '';
+    /* Agrega contenido pseudo-elemento */
+    position: absolute;
+    /* Permite posicionar el fondo transparente */
+    top: 0;
+    /* Coloca el fondo transparente en la parte superior del contenedor */
+    left: 0;
+    /* Coloca el fondo transparente en la parte izquierda del contenedor */
+    width: 100%;
+    /* Hace que el fondo transparente cubra todo el ancho del contenedor */
+    height: 100%;
+    /* Hace que el fondo transparente cubra toda la altura del contenedor */
+    background-color: rgba(108, 100, 100, 0.1);
+    /* Define el color y la opacidad del fondo transparente */
+}
+
+
+section img {
+    display: block;
+    /* Hace que las imágenes sean elementos de bloque */
+    margin: auto;
+    /* Centra horizontalmente las imágenes */
+    max-width: 100%;
+    /* Asegura que las imágenes no se desborden de su contenedor */
+    max-height: 100%;
+    /* Asegura que las imágenes no se desborden de su contenedor */
+    object-fit: contain;
+    /* Mantiene la relación de aspecto de las imágenes sin distorsionarlas */
+}
+
+
+#login {
+    margin: 50px auto;
+    width: 30%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+#login h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
+
+.form-button {
+    display: flex;
+}
+
+.form-button button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4dd7fa;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Poppins';
+}
+
+.form-button button[type="button"]:hover {
+    background-color: #35b2d3;
+}
+
+.cardContainer {
+    position: relative;
+    width: 200px;
+    /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Ajusta el margen inferior según tus necesidades */
+}
+
+.cardContainer .image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.cardContainer img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardContainer .button-container {
+    position: absolute;
+    bottom: 10px;
+    /* Ajusta la distancia desde la parte inferior según sea necesario */
+    margin-bottom: 75px;
+    right: 38%;
+    width: 100%;
+    /* Asegura que el contenedor abarque todo el ancho */
+    text-align: center;
+    /* Centra horizontalmente el contenido */
+}
+
+.cardContainer .button-container button {
+    display: inline-block;
+    /* Hace que el botón se muestre en línea horizontal */
+
+}
+
+.cardContainer .addToCartButton {
+    font-family: 'Poppins';
+    display: inline-block;
+    background-color: #4dd7fa;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cardContainer:hover .addToCartButton {
+    opacity: 1;
+}
+
+.image-container2 {
+    width: 250px;
+    /* Define el ancho deseado para el contenedor */
+    height: 250px;
+    /* Define la altura deseada para el contenedor */
+    position: relative;
+    /* Permite posicionar el fondo transparente relativo al contenedor */
+    display: flex;
+    /* Utiliza el modelo de caja flexible */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+}
+
+.image-container2 img {
+    width: 100%;
+    /* Hace que la imagen ocupe todo el espacio disponible dentro del contenedor */
+    height: 100%;
+    /* Hace que la imagen ocupe todo el espacio disponible dentro del contenedor */
+    object-fit: contain;
+    /* Mantiene la relación de aspecto de la imagen sin distorsionarla */
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container2 .miniTitulosDiv {
+    position: absolute;
+    width: 100%;
+    margin-top: 300px;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color del fondo del botón */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay button {
+    color: white;
+    background-color: #4dd7fa;
+    /* Color del botón */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.overlay button:hover {
+    background-color: #4dd7fa;
+    /* Cambia el color al pasar el cursor */
+}
+
+.image-container2:hover .overlay {
+    display: flex;
+    /* Muestra el botón cuando se pasa el cursor sobre la imagen */
+}

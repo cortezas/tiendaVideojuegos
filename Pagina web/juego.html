@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesIndex.css">
+    <script src="comprobarLogin.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Contenido/Index/logo.png" id="logo">
+            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+        </div>
+        <div class="header-buttons">
+            <input type="text" placeholder="&#128269; Buscar">
+            <button class="icon-button" id="avatar" onclick="redireccionarLogin()"><img src="../Contenido/Index/avatar.png" alt="Avatar"></button>
+            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png" alt="Cesta"></button>
+        </div>
+    </header>
+    <nav>
+        <table id="nav">
+            <tr style="cursor: pointer;">
+                <th onclick="redireccionarNav('merchandising')">MERCHANDISING</th>
+                <th onclick="redireccionarNav('switch')">SWITCH</th>
+                <th onclick="redireccionarNav('pc')">PC</th>
+                <th onclick="redireccionarNav('xbox')">XBOX</th>
+                <th onclick="redireccionarNav('playstation')">PLAYSTATION</th>
+            </tr>
+        </table>
+    </nav>
+    <section id="datos">
+        <table style="height: 500px; width: 90%; margin: auto; padding: 60px;">
+            <tr>
+                <th style="width: 35%; border-bottom: 1px solid black; border-right: 1px solid black;">JUEGO</th>
+                <th style="width: 65%; border-bottom: 1px solid black;">DESCRIPCION</th>   
+            </tr>
+        </table>
+    </section>
+    <section id="informacionJuego">
+        <h2>INFORMACIÓN</h2>
+        <table style="height: 500px; width: 90%; margin: auto; padding: 60px;"> <!--La altura está fija ahora por conceptualización-->
+            <tr>
+                <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">VIDEO</th>
+                <th style="width: 60%; border-bottom: 1px solid black;border: 1px solid black;">INFORMACION</th>    
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <div id="contenidoFooterPrimero">
+            <p><b>SUSCRÍBETE A LA NEWSLETTER</b></p>
+            <button type="submit" style="background-color: #4dd7fa;"><b>Enviar</b></button>
+            <input type="text" placeholder="Introduce tu email...">
+        </div>
+        <div id="tablaFooter">
+            <table>
+                <tr>
+                    <th>
+                        <p><b><a href="quienessomos.html">SOBRE NOSOTROS</a></b></p>
+                    </th>
+                    <th>
+                        <p><b>REDES SOCIALES</b></p>
+                    </th>
+                    <th>
+                        <p><b>TÉRMINOS LEGALES</b></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                    <td>
+                        <img src="../Contenido/Index/logotwitter.png" width="20%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoinstagram.png" width="18%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoyoutube.png" width="20%" style="padding: 5px;">
+                    </td>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                </tr>
+            </table>
+    </footer>
+    <script src="redirecciones.js"></script>
+</body>
+</html>

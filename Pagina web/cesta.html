@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesIndex.css">
+    <script src="comprobarLogin.js" type="module"></script>
+    <script src="carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Estilo para la palabra "Pedido" */
+        .pedido {
+            font-weight: bold;
+            font-size: 25px;
+            /* Hace que la palabra "Pedido" sea negrita */
+        }
+
+        /* Estilo para la palabra "Productos" */
+        .productos {
+            font-style: italic;
+            /* Hace que la palabra "Productos" sea en cursiva */
+        }
+
+        .precio {
+            font-size: 25px;
+            color: #4dd7fa;
+        }
+
+        .textoPerfil {
+            display: block;
+            text-align: left;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        #numeroPedidos {
+            display: block;
+            text-align: left;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Contenido/Index/logo.png" id="logo">
+            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+        </div>
+        <div class="header-buttons">
+            <input type="text" placeholder="&#128269; Buscar">
+            <button class="icon-button" id="avatar" onclick="redireccionarLogin()"><img
+                    src="../Contenido/Index/avatar.png" alt="Avatar"></button>
+            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png"
+                    alt="Cesta"></button>
+        </div>
+    </header>
+    <nav>
+        <table id="nav">
+            <tr style="cursor: pointer;">
+                <th onclick="redireccionarNav('merchandising')">MERCHANDISING</th>
+                <th onclick="redireccionarNav('switch')">SWITCH</th>
+                <th onclick="redireccionarNav('pc')">PC</th>
+                <th onclick="redireccionarNav('xbox')">XBOX</th>
+                <th onclick="redireccionarNav('playstation')">PLAYSTATION</th>
+            </tr>
+        </table>
+    </nav>
+    <section id="pedidosCesta">
+        <h2>MI CESTA</h2>
+        <table id="tablaCesta" style="margin: auto; width: 70%; margin-bottom: 50px; text-align: center;">
+            <!-- Aquí se mostrarán los juegos en la cesta -->
+        </table>
+    </section>
+    <!--Aqui estarán los botones para comprar y reiniciar la cesta-->
+    <section id="pagoCesta"
+        style="margin: auto; margin-bottom: 20px; width: 30%; padding: 20px; background-color: #212729; display: flex;">
+        <p id="precioTotal" style="color: #4dd7fa; text-align: center; margin-right: 100px;">PRECIO TOTAL:</p>
+        <button type="submit"
+            style="cursor: pointer;background-color: #4dd7fa; padding: 15px 30px; margin-right: 50px;"><b>COMPRAR</b></button>
+        <button type="submit" style="cursor: pointer;background-color: #4dd7fa; padding: 15px 30px;"
+            onclick="reiniciarCesta()"><b>REINICIAR
+                CESTA</b></button>
+    </section>
+    <footer style="position: fixed; bottom: 0;">
+        <div id="contenidoFooterPrimero">
+            <p><b>SUSCRÍBETE A LA NEWSLETTER</b></p>
+            <button type="submit" style="background-color: #4dd7fa;"><b>Enviar</b></button>
+            <input type="text" placeholder="Introduce tu email...">
+        </div>
+        <div id="tablaFooter">
+            <table>
+                <tr>
+                    <th>
+                        <p><b><a href="quienessomos.html">SOBRE NOSOTROS</a></b></p>
+                    </th>
+                    <th>
+                        <p><b>REDES SOCIALES</b></p>
+                    </th>
+                    <th>
+                        <p><b>TÉRMINOS LEGALES</b></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                    <td>
+                        <img src="../Contenido/Index/logotwitter.png" width="20%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoinstagram.png" width="18%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoyoutube.png" width="20%" style="padding: 5px;">
+                    </td>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                </tr>
+            </table>
+    </footer>
+    <script src="redirecciones.js"></script>
+    <script>
+        // Función para mostrar los juegos en la cesta y calcular el precio total
+        function mostrarJuegosEnCesta() {
+            const tablaCesta = document.querySelector("#tablaCesta");
+            const precioTotalElement = document.querySelector("#precioTotal");
+
+            // Limpiar la tabla
+            tablaCesta.innerHTML = "";
+
+            // Iterar sobre los juegos en el carrito y agregar una fila para cada uno
+            let precioTotal = 0;
+            carrito.forEach((juego, index) => {
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                <td style="width:33%; border-bottom: 1px solid black"><b><span class="pedido">PRODUCTO Nº ${index + 1}</span></b></td>
+                    <td style="width:33%; border-bottom: 1px solid black">${juego.nombre}</td>
+                    <td style="width:33%; border-bottom: 1px solid black"><span class="pedido">PRECIO: </span><span class="precio">${juego.precio}€</span></td>
+                `;
+                tablaCesta.appendChild(fila);
+                precioTotal += juego.precio;
+            });
+            precioTotal = precioTotal.toFixed(2);
+
+            // Mostrar el precio total
+            precioTotalElement.textContent = `PRECIO TOTAL: ${precioTotal}€`;
+        }
+
+        // Funcion para reiniciar la cesta
+        function reiniciarCesta() {
+            Swal.fire({
+                title: 'Lista borrada',
+                text: 'Volviendo a inicio...',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Limpiar el carrito y actualizar la visualización
+                    carrito = [];
+                    localStorage.removeItem('carrito');
+                    mostrarJuegosEnCesta();
+                    window.location.href = "index.html";
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recuperar el carrito almacenado en localStorage
+            const carritoGuardado = localStorage.getItem('carrito');
+            if (carritoGuardado) {
+                // Si hay un carrito almacenado, convertirlo de nuevo a un array y asignarlo a la variable carrito
+                carrito = JSON.parse(carritoGuardado);
+            }
+            // Mostrar los juegos en la cesta
+            mostrarJuegosEnCesta();
+
+            // Agregar un event listener al botón de comprar
+            const botonComprar = document.querySelector("#pagoCesta button[type='submit']");
+            botonComprar.addEventListener("click", function () {
+                // Guardar el pedido en localStorage
+                const usuario = localStorage.getItem("usuario");
+                if (usuario) {
+                    // Recuperar los pedidos previos del localStorage
+                    const pedidosGuardados = localStorage.getItem('pedidos');
+                    let pedidos = [];
+                    if (pedidosGuardados) {
+                        pedidos = JSON.parse(pedidosGuardados);
+                    }
+
+                    // Crear un nuevo pedido y agregarlo a la lista de pedidos
+                    const pedidoNuevo = {
+                        usuario: usuario,
+                        productos: carrito
+                    };
+                    pedidos.push(pedidoNuevo);
+
+                    // Guardar la lista actualizada de pedidos en localStorage
+                    localStorage.setItem('pedidos', JSON.stringify(pedidos));
+                    console.log("Pedido guardado:", pedidoNuevo);
+
+                    // Alerta de gracias por comprar
+                    Swal.fire({
+                        title: 'Gracias por comprar!',
+                        text: 'Volviendo a inicio...',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Limpiar el carrito y actualizar la visualización
+                            carrito = [];
+                            localStorage.removeItem('carrito');
+                            mostrarJuegosEnCesta();
+                            window.location.href = "index.html";
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'Tiene que haber un usuario logeado',
+                        icon: 'error',
+                        confirmButtonText: 'Cool'
+                    });
+                }
+
+            });
+
+            // Verificar si el usuario está logueado al cargar la página
+            const usuario = localStorage.getItem("usuario");
+            if (usuario) {
+                // Si hay un usuario logueado, redirigir al área de cliente
+                const avatarBtn = document.getElementById("avatar");
+                avatarBtn.addEventListener("click", function () {
+                    window.location.href = "cliente.html";
+                });
+            } else {
+                // Si no hay usuario, redirigir a la página de inicio de sesión
+                const avatarBtn = document.getElementById("avatar");
+                avatarBtn.addEventListener("click", function () {
+                    window.location.href = "login.html";
+                });
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

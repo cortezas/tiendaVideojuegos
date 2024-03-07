@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesIndex.css">
+    <link rel="stylesheet" href="stylesIndex.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css'>
+    <link rel="stylesheet" href="stylesCaratulasPC.css">
+    <link rel="stylesheet" href="stylesCaratulasSwitch.css">
+    <link rel="stylesheet" href="stylesCaratulasXP.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="comprobarLogin.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Contenido/Index/logo.png" id="logo">
+            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+        </div>
+        <div class="header-buttons">
+            <input type="text" placeholder="&#128269; Buscar">
+            <button class="icon-button" id="avatar" onclick="redireccionarLogin()"><img
+                    src="../Contenido/Index/avatar.png" alt="Avatar"></button>
+            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png"
+                    alt="Cesta"></button>
+        </div>
+    </header>
+    <nav>
+        <table id="nav">
+            <tr style="cursor: pointer;">
+                <th onclick="redireccionarNav('merchandising')">MERCHANDISING</th>
+                <th onclick="redireccionarNav('switch')">SWITCH</th>
+                <th onclick="redireccionarNav('pc')">PC</th>
+                <th onclick="redireccionarNav('xbox')">XBOX</th>
+                <th onclick="redireccionarNav('playstation')">PLAYSTATION</th>
+            </tr>
+        </table>
+    </nav>
+    <!--Un poco sobre la empresa-->
+    <section id="quienesSomos" style="width: 70%; margin: auto;">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>En The Gaming Room, nos dedicamos a ofrecer la mejor experiencia para los amantes de los videojuegos. Con
+            una pasión inquebrantable por la industria, nos esforzamos por brindarte una selección cuidadosa de
+            juegos y accesorios de alta calidad. Nuestro objetivo es crear un espacio donde los jugadores puedan
+            encontrar todo lo que necesitan para disfrutar al máximo de su pasión por los videojuegos. ¡Bienvenido a
+            The Gaming Room!</p>
+    </section>
+    <!--Mas información-->
+    <section id="informacionQuienesSomos">
+        <table style="height: 500px; width: 80%; margin: auto; padding: 50px;">
+            <!--La altura está fija ahora por conceptualización-->
+            <tr>
+                <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bScBhXGbMZE" frameborder="0"
+                        allowfullscreen></iframe>
+                </th>
+                <th
+                    style="width: 60%; border-bottom: 1px solid black;border: 1px solid black; background-color: #212729;">
+                    <h2 style="color: #4dd7fa; text-align: left;">INFORMACIÓN</h2>
+                    <p style="text-align: justify; margin: 45px; color: white;">
+                        Descubre la experiencia definitiva en juegos con The Gaming Room. Ofrecemos una amplia selección
+                        de títulos para todas las plataformas, desde clásicos hasta lanzamientos recientes. Nuestro
+                        equipo está comprometido en brindarte el mejor servicio y asesoramiento para que disfrutes al
+                        máximo. Únete a nuestra comunidad de jugadores apasionados y vive la emoción en The Gaming Room.
+                    </p>
+                    </p>
+                </th>
+            </tr>
+        </table>
+
+    </section>
+    <!--Diferentes puntos de venta-->
+    <section id="puntosVenta">
+        <h2>PUNTOS DE VENTA</h2>
+        <table style="height: 500px; width: 80%; margin: auto; padding: 60px;">
+            <!--La altura está fija ahora por conceptualización-->
+            <tr>
+                <th style="width: 500px; height: 333px;">
+                    <img src="https://dragondigital.es/wp-content/uploads/tiendavideojuegos1.jpg" alt="Venta 1"
+                        style="width: 100%;">
+                    <p>Ubicación: Calle Principal 123</p>
+                </th>
+                <th style="width: 500px; height: 333px;">
+                    <img src="https://ccladehesa.es/img_v2/directorio/locales/local-112.jpg" alt="Venta 2"
+                        style="width: 100%;">
+                    <p>Ubicación: Avenida Central 456</p>
+                </th>
+                <th style="width: 500px; height: 333px;">
+                    <img src="https://huelvabuenasnoticias.com/wp-content/uploads/2017/03/Apertura-Game-1.jpg"
+                        alt="Venta 3" style="width: 100%;">
+                    <p>Ubicación: Plaza del Sol 789</p>
+                </th>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <div id="contenidoFooterPrimero">
+            <p><b>SUSCRÍBETE A LA NEWSLETTER</b></p>
+            <button type="submit" style="background-color: #4dd7fa;"><b>Enviar</b></button>
+            <input type="text" placeholder="Introduce tu email...">
+        </div>
+        <div id="tablaFooter">
+            <table>
+                <tr>
+                    <th>
+                        <p><b><a href="quienessomos.html">SOBRE NOSOTROS</a></b></p>
+                    </th>
+                    <th>
+                        <p><b>REDES SOCIALES</b></p>
+                    </th>
+                    <th>
+                        <p><b>TÉRMINOS LEGALES</b></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                    <td>
+                        <img src="../Contenido/Index/logotwitter.png" width="20%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoinstagram.png" width="18%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoyoutube.png" width="20%" style="padding: 5px;">
+                    </td>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                </tr>
+            </table>
+    </footer>
+    <script src="redirecciones.js"></script>
+</body>
+
+</html>

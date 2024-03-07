@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesIndex.css">
+    <script src="comprobarLogin.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Estilo para la palabra "Pedido" */
+        .pedido {
+            font-weight: bold;
+            font-size: 25px;
+            /* Hace que la palabra "Pedido" sea negrita */
+        }
+
+        /* Estilo para la palabra "Productos" */
+        .productos {
+            font-style: italic;
+            /* Hace que la palabra "Productos" sea en cursiva */
+        }
+
+        .precio {
+            font-size: 25px;
+            color: #4dd7fa;
+        }
+
+        .textoPerfil {
+            display: block;
+            text-align: left;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        #numeroPedidos {
+            display: block;
+            text-align: left;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Contenido/Index/logo.png" id="logo">
+            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+        </div>
+        <div class="header-buttons">
+            <input type="text" placeholder="&#128269; Buscar">
+            <button class="icon-button" id="avatar" onclick="redireccionarLogin()"><img
+                    src="../Contenido/Index/avatar.png" alt="Avatar"></button>
+            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png"
+                    alt="Cesta"></button>
+        </div>
+    </header>
+    <!--Seccion de datos con la información del usuario y un boton para hacer logout-->
+    <section id="datos">
+        <table style="max-height: 550px; width: 90%; margin: auto; padding: 60px;">
+            <tr>
+                <th style="width: 30%; border-bottom: 1px solid black; border-right: 1px solid black;">
+                    <h2>CORTEZAS</h2>
+                    <img src="../Contenido/Index/gigachad.jpg" style="max-width: 65%; padding-bottom: 50px;">
+                </th>
+                <th style="width: 70%; border-bottom: 1px solid black;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h2 style="text-align: left;">NOMBRE COMPLETO</h2>
+                        <!--Boton para cerrar sesión-->
+                        <button
+                            style="margin-left: auto; cursor: pointer;background-color: #4dd7fa; padding: 15px 30px; font-family: 'Poppins';"
+                            onclick="cerrarSesion()">CERRAR SESIÓN</button>
+                    </div>
+                    <span class="textoPerfil">Raúl Castro García</span>
+                    <h2 style="text-align: left;">CORREO ELECTRÓNICO</h2>
+                    <span class="textoPerfil">example@gmail.com</span>
+                    <h2 style="text-align: left;">Nº PEDIDOS</h2>
+                    <span id="numeroPedidos"></span>
+                </th>
+            </tr>
+        </table>
+    </section>
+    <!--Aquí irán los pedidos del cliente que se irán actualizando-->
+    <section id="pedidosCliente">
+        <table>
+            <!--Contenido-->
+        </table>
+    </section>
+    <footer>
+        <div id="contenidoFooterPrimero">
+            <p><b>SUSCRÍBETE A LA NEWSLETTER</b></p>
+            <button type="submit" style="background-color: #4dd7fa;"><b>Enviar</b></button>
+            <input type="text" placeholder="Introduce tu email...">
+        </div>
+        <div id="tablaFooter">
+            <table>
+                <tr>
+                    <th>
+                        <p><b><a href="quienessomos.html">SOBRE NOSOTROS</a></b></p>
+                    </th>
+                    <th>
+                        <p><b>REDES SOCIALES</b></p>
+                    </th>
+                    <th>
+                        <p><b>TÉRMINOS LEGALES</b></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                    <td>
+                        <img src="../Contenido/Index/logotwitter.png" width="20%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoinstagram.png" width="18%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoyoutube.png" width="20%" style="padding: 5px;">
+                    </td>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                </tr>
+            </table>
+    </footer>
+    <script src="redirecciones.js"></script>
+    <script>
+        function cerrarSesion() {
+            localStorage.removeItem("usuario");
+            Swal.fire({
+                title: 'Se ha cerrado sesión',
+                text: 'Redirigiendo a index',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirigir a cliente
+                    window.location.href = "index.html";
+                }
+            });
+        }
+        // Función para cargar y mostrar los pedidos del usuario
+        function mostrarPedidos() {
+            // Recuperar los pedidos del usuario desde el almacenamiento local
+            const pedidos = JSON.parse(localStorage.getItem("pedidos"));
+
+            // Verificar si hay pedidos guardados
+            if (pedidos && pedidos.length > 0) {
+                const tablaPedidos = document.querySelector("#pedidosCliente table");
+
+                // Limpiar la tabla de pedidos
+                tablaPedidos.innerHTML = "";
+
+                // Iterar sobre los pedidos y agregar una fila para cada uno
+                pedidos.forEach((pedido, index) => {
+                    const fila = document.createElement("tr");
+                    // Crea una lista con puntos al lado de cada nombre de producto
+                    const listaProductos = pedido.productos.map(producto => "• " + producto.nombre).join('<br>');
+                    fila.innerHTML = `
+                <td style="width:20%; border-bottom: 1px solid black"><b><span class="pedido">PEDIDO Nº ${index + 1}</span></b></td>
+                <td style="width:60%; border-bottom: 1px solid black; padding:20px">
+                    <b><span class="productos">PRODUCTOS</span>:</b><br>${listaProductos}</td>
+                <td style="width:20%; border-bottom: 1px solid black"><span class="pedido">PRECIO: </span><span class="precio">${pedido.productos.reduce((total, producto) => total + producto.precio, 0).toFixed(2)}€</span></td>
+            `;
+                    tablaPedidos.appendChild(fila);
+                });
+
+            } else {
+                // Si no hay pedidos, mostrar un mensaje
+                document.querySelector("#pedidosCliente").innerHTML = "<p>No hay pedidos disponibles.</p>";
+            }
+
+            // Obtener el elemento donde mostrar el número de pedidos
+            const numeroPedidosElemento = document.getElementById("numeroPedidos");
+            // Mostrar el número de pedidos
+            numeroPedidosElemento.textContent = pedidos.length.toString();
+        }
+
+        // Llamar a la función al cargar la página
+        window.onload = mostrarPedidos;
+    </script>
+</body>
+
+</html>

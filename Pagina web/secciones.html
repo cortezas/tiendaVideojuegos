@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=McLaren" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="stylesIndex.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css'>
+    <link rel="stylesheet" href="stylesCaratulasPC.css">
+    <link rel="stylesheet" href="stylesCaratulasSwitch.css">
+    <link rel="stylesheet" href="stylesCaratulasXP.css">
+    <script src="comprobarLogin.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="carrito.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Contenido/Index/logo.png" id="logo">
+            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+        </div>
+        <div class="header-buttons">
+            <input type="text" placeholder="&#128269; Buscar">
+            <button class="icon-button" id="avatar" onclick="redireccionarLogin()"><img
+                    src="../Contenido/Index/avatar.png" alt="Avatar"></button>
+            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png"
+                    alt="Cesta"></button>
+        </div>
+    </header>
+    <nav>
+        <table id="nav">
+            <tr style="cursor: pointer;">
+                <th onclick="mostrarContenido('merchandising')">MERCHANDISING</th>
+                <th onclick="mostrarContenido('switch')">SWITCH</th>
+                <th onclick="mostrarContenido('pc')">PC</th>
+                <th onclick="mostrarContenido('xbox')">XBOX</th>
+                <th onclick="mostrarContenido('playstation')">PLAYSTATION</th>
+            </tr>
+        </table>
+    </nav>
+    <section id="merchandising" style="display: none;">
+        <!-- Contenido para la opción "Merchandising" -->
+        <subsection id="informacionConsola">
+            <h2>MERCHANDISING</h2>
+            <table style="height: 500px; width: 80%; margin: auto; padding: 50px;">
+                <!--La altura está fija ahora por conceptualización-->
+                <tr>
+                    <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rwGHZlsglV0"
+                            frameborder="0" allowfullscreen></iframe>
+                    </th>
+                    <th
+                        style="width: 60%; border-bottom: 1px solid black;border: 1px solid black; background-color: #212729;">
+                        <h2 style="color: #4dd7fa; text-align: left;">INFORMACIÓN</h2>
+                        <p style="text-align: justify; margin: 45px; color: white;">El merchandising ofrece a los
+                            fanáticos una manera emocionante de expresar su pasión por sus juegos, películas y
+                            personajes favoritos. Desde camisetas y figuras de acción hasta tazas y pósters, el
+                            merchandising proporciona una amplia variedad de productos para todos los gustos y edades.
+                        </p>
+                    </th>
+                </tr>
+            </table>
+        </subsection>
+        <!--Seccion de top Ventas-->
+        <subsection id="topVentas">
+            <h2>TOP VENTAS</h2>
+            <table style="margin: auto;">
+                <tr>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/kirby.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Peluche Kirby 32 cm</h3>
+                                <span id="precio">Precio: <b>14.95€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/yoshi.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Peluche Yoshi 20 cm</h3>
+                                <span id="precio">Precio: <b>9.5€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/vaporeon.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Funko Pop Vaporeon</h3>
+                                <span id="precio">Precio: <b>14.95€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/hercules.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Funko Pop Hercules</h3>
+                                <span id="precio">Precio: <b>12.95€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/chanclasbroly.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Chanclas Broly</h3>
+                                <span id="precio">Precio: <b>6.5€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </subsection>
+        <!--Seccion de destacados-->
+        <subsection id="destacados">
+            <table style="height: 700px; width: 85%; margin: auto; padding: 80px;">
+                <tr style="background-color: #212729;">
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>CHANCLAS<br>DRAGON BALL</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                4.5€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 40vh; height: 65vh; border-radius: 18px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/Merchandising/chanclasdragonball.png" alt="Imagen 1">
+                        </div>
+                    </td>
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa;text-align: left; margin-left: 100px;">
+                                <b>LLAVERO ONE PIECE<br>MONKEY D. LUFFY</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                7.5€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 40vh; height: 65vh; border-radius: 18px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/Merchandising/llaveroluffy.png" alt="Imagen 2">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </subsection>
+        <!--Seccion de novedades-->
+        <subsection id="novedades">
+            <h2>NOVEDADES</h2>
+            <table style="margin: auto;">
+                <tr>
+                    <td style="padding: 70px; text-align: center;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/catan.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Catan: El Juego</h3>
+                                <span id="precio">Precio: <b>2.95€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/cluedo.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Cluedo: Juego de Mesa</h3>
+                                <span id="precio">Precio: <b>2.95€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/gatorojo.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Cuenco Ramen: Gato Rojo</h3>
+                                <span id="precio">Precio: <b>6.5€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/ramen.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Cuenco Ramen: Naruto</h3>
+                                <span id="precio">Precio: <b>6.5€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 70px;">
+                        <div class="image-container2">
+                            <img src="../Contenido/Merchandising/llaverozoro.png">
+                            <div class="overlay">
+                                <button>Añadir al carrito</button>
+                            </div>
+                            <div class="miniTitulosDiv">
+                                <h3 id="miniTitulos">Llavero One Piece: Zoro</h3>
+                                <span id="precio">Precio: <b>1.95€</b></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </subsection>
+    </section>
+    <!--Todas las secciones de videojuegos siguen el mismo esquema-->
+    <section id="switch" style="display: none;">
+        <!-- Contenido para la opción "Switch" -->
+        <subsection id="informacionConsola">
+            <h2>NINTENDO SWITCH</h2>
+            <table style="height: 500px; width: 80%; margin: auto; padding: 50px;">
+                <!--La altura está fija ahora por conceptualización-->
+                <tr>
+                    <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XoMEATvLpyA"
+                            frameborder="0" allowfullscreen></iframe>
+                    </th>
+                    <th
+                        style="width: 60%; border-bottom: 1px solid black;border: 1px solid black; background-color: #212729;">
+                        <h2 style="color: #4dd7fa; text-align: left;">INFORMACIÓN</h2>
+                        <p style="text-align: justify; margin: 45px; color: white;">"La Nintendo Switch redefine la
+                            experiencia de juego con su versatilidad única. Esta consola
+                            híbrida combina la comodidad de jugar en casa con la libertad de llevar tus juegos contigo a
+                            donde quiera que vayas. Con su diseño innovador 2 en 1, puedes disfrutar de una amplia
+                            variedad
+                            de títulos tanto en modo de sobremesa como en modo portátil, ofreciendo una experiencia de
+                            juego
+                            sin igual para jugadores de todas las edades."</p>
+                    </th>
+                </tr>
+            </table>
+        </subsection>
+        <subsection id="topVentas">
+            <h2>TOP VENTAS</h2>
+            <div class="wrapperSwitch">
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/legostarwars.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Lego Star Wars</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 19.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/kirby.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Kirby Forgotten</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/blashpemous.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Blasphemous II</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 19.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/zelda.webp" alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Zelda TOTK</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 69.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/smashbros.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Super Smash Bros</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+        <subsection id="destacados">
+            <table style="height: 700px; width: 85%; margin: auto; padding: 80px; margin-top: 50px;">
+                <tr style="background-color: #212729;">
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>THE BINDING OF<br>ISAAC</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                25.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 40vh; height: 65vh; border-radius: 18px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/Nintendo Switch/isaac.png" alt="Imagen 1">
+                        </div>
+                    </td>
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>SUPER MARIO<br>BROS WONDER</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                45.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 40vh; height: 65vh; border-radius: 18px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/Nintendo Switch/mariowonder.png" alt="Imagen 2">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </subsection>
+        <subsection id="novedades" style="padding: auto;">
+            <h2>NOVEDADES</h2>
+            <div class="wrapperSwitch">
+                <div class="cardSwitch" onclick="redireccionarJuego()">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/marioodyssey.jpg"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Super Mario Odyssey</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/splatoon_3.jpg"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Splatoon 3</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/pokemonpurpura.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Pokemon Púrpura</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/pokemonescarlata.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Pokemon Escarlata</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardSwitch">
+                    <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/Metroid_Prime_Remasteres.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsSwitch">
+                        <h1>Metroid Prime Rem.</h1>
+                        <div class="ratingSwitch">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 39.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+    </section>
+    <section id="pc" style="display: none;">
+        <!-- Contenido para la opción "PC" -->
+        <subsection id="informacionConsola">
+            <h2>PC</h2>
+            <table style="height: 500px; width: 80%; margin: auto; padding: 50px;">
+                <!--La altura está fija ahora por conceptualización-->
+                <tr>
+                    <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yQK--z_jE7M"
+                            frameborder="0" allowfullscreen></iframe>
+                    </th>
+                    <th
+                        style="width: 60%; border-bottom: 1px solid black;border: 1px solid black; background-color: #212729;">
+                        <h2 style="color: #4dd7fa; text-align: left;">INFORMACION</h2>
+                        <p style="text-align: justify; margin: 45px; color: white;">"El PC es una plataforma de juego
+                            versátil y personalizable que ofrece una amplia gama de experiencias. Desde juegos
+                            independientes hasta títulos AAA, los jugadores pueden disfrutar de una variedad ilimitada
+                            de opciones. Con la capacidad de actualizar hardware y software, los PC permiten a los
+                            usuarios adaptar su experiencia de juego según sus preferencias y necesidades.</p>
+                    </th>
+                </tr>
+            </table>
+        </subsection>
+        <subsection id="topVentas">
+            <h2>TOP VENTAS</h2>
+            <div class="wrapperPC">
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/dark souls.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Dark Souls 3</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/starwars.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Jedi Fallen Order</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 15.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/stardew_valley.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Stardew Valley</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 9.5€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/hollowknight.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Hollow Knight</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 19.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/nier.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Nier Automata</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+        <subsection id="destacados">
+            <table style="height: 700px; width: 85%; margin: auto; padding: 80px; margin-top: 50px;">
+                <tr style="background-color: #212729;">
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>SUBNAUTICA<br>BELOW ZERO</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                15.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 45vh; height: 70vh; border-radius: 14%; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/PC/subnautica.jpg" alt="Imagen 1">
+                        </div>
+                    </td>
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa;text-align: left; margin-left: 100px;">
+                                <b>WALL WORLD</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                4.9€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 45vh; height: 70vh; border-radius: 14%; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/PC/wall-world.png" alt="Imagen 2">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </subsection>
+
+        <subsection id="novedades">
+            <h2>NOVEDADES</h2>
+            <div class="wrapperPC">
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/slaythespirebase.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Slay The Spire</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 9.5€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/SEKIRO.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Sekiro</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/steamworlddig.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Steamworld Dig</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 4.5€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/valheim.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Valheim</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.2/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 19.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardPC">
+                    <div class="posterPC"><img src="/Contenido/PC/hades.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsPC">
+                        <h1>Hades</h1>
+                        <div class="ratingPC">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 19.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+    </section>
+    <section id="xbox" style="display: none;">
+        <!-- Contenido para la opción "Xbox" -->
+        <subsection id="informacionConsola">
+            <h2>XBOX</h2>
+            <table style="height: 500px; width: 80%; margin: auto; padding: 50px;">
+                <!--La altura está fija ahora por conceptualización-->
+                <tr>
+                    <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0tUqIHwHDEc"
+                            frameborder="0" allowfullscreen></iframe>
+                    </th>
+                    <th
+                        style="width: 60%; border-bottom: 1px solid black;border: 1px solid black; background-color: #212729;">
+                        <h2 style="color: #4dd7fa; text-align: left;">INFORMACION</h2>
+                        <p style="text-align: justify; margin: 45px; color: white;">"La Xbox Series X y Xbox Series S de
+                            Microsoft representan la evolución definitiva en el mundo de las consolas de videojuegos.
+                            Con la potencia incomparable de la Serie X y la accesibilidad de la Serie S, estas consolas
+                            ofrecen una experiencia de juego de próxima generación para todos los jugadores. Desde
+                            gráficos impresionantes hasta tiempos de carga ultrarrápidos, cada detalle ha sido diseñado
+                            para sumergirte en mundos virtuales como nunca antes.</p>
+                    </th>
+                </tr>
+            </table>
+        </subsection>
+        <subsection id="topVentas">
+            <h2>TOP VENTAS</h2>
+            <div class="wrapperXP">
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/haloinfinite.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Halo Infinite</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 39.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/rdr2.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>RDR 2</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/starfield.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Starfield</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 69.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/forzahorizon5.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Forza Horizon 5</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/wwe2k23.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>WWE 2K23</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+        <subsection id="destacados">
+            <table style="height: 700px; width: 85%; margin: auto; padding: 80px; margin-top: 50px;">
+                <tr style="background-color: #212729;">
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>PRINCE OF PERSIA: <br>THE LOST CROWN</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                45.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 47vh; height: 62vh; border-radius: 30px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/Xbox/princeofpersia.jpg" alt="Imagen 1">
+                        </div>
+                    </td>
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>LIES OF P</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                35.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 47vh; height: 62vh; border-radius: 40px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/Xbox/lies of p.jpg" alt="Imagen 2">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </subsection>
+        <subsection id="novedades">
+            <h2>NOVEDADES</h2>
+            <div class="wrapperXP">
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/diabloiv.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Diablo IV</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/likeadragon.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Infinite Wealth</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/persona3remake.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Persona 3 Remake</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/redfall.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Redfall</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 39.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/Xbox/gollum.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>LOTR: Gollum</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 0,.9€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+    </section>
+    <section id="playstation" style="display: none;">
+        <!-- Contenido para la opción "PlayStation" -->
+        <subsection id="informacionConsola">
+            <h2>PLAYSTATION</h2>
+            <table style="height: 500px; width: 80%; margin: auto; padding: 50px;">
+                <!--La altura está fija ahora por conceptualización-->
+                <tr>
+                    <th style="width: 40%; border-bottom: 1px solid black; border: 1px solid black;">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RkC0l4iekYo"
+                            frameborder="0" allowfullscreen></iframe>
+                    </th>
+                    <th
+                        style="width: 60%; border-bottom: 1px solid black;border: 1px solid black; background-color: #212729;">
+                        <h2 style="color: #4dd7fa; text-align: left;">INFORMACIÓN</h2>
+                        <p style="text-align: justify; margin: 45px; color: white;">"La PS5 de Sony representa el
+                            pináculo de la innovación en el mundo de las consolas de videojuegos. Con su potente
+                            hardware y tecnología de vanguardia, la PS5 ofrece una experiencia de juego inmersiva como
+                            ninguna otra. Desde gráficos de alta fidelidad hasta tiempos de carga ultrarrápidos, esta
+                            consola de próxima generación lleva el entretenimiento interactivo a nuevos niveles. Además,
+                            con su amplio catálogo de juegos exclusivos y compatibilidad con títulos de generaciones
+                            anteriores, la PS5 brinda a los jugadores una experiencia única y emocionante que nunca
+                            olvidarán."</p>
+                    </th>
+                </tr>
+            </table>
+        </subsection>
+        <subsection id="topVentas">
+            <h2>TOP VENTAS</h2>
+            <div class="wrapperXP">
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/eldenring.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Elden Ring</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/finalfantasyxvi.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Final Fantasy XVI</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 39.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/gow+ragnarok.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>GOW Ragnarok</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/finalfantasyvii.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>F.F. VII: Rebirth</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/f123.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>F1 23</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 33.33€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+        <subsection id="destacados">
+            <table style="height: 700px; width: 85%; margin: auto; padding: 80px; margin-top: 50px;">
+                <tr style="background-color: #212729;">
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa;text-align: left; margin-left: 100px;">
+                                <b>MARVEL<br>SPIDERMAN 2</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                59.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 49vh; height: 65vh; border-radius: 30px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/PlayStation/marvelspiderman2.png" alt="Imagen 1">
+                        </div>
+                    </td>
+                    <td style="width: 50%;border: 1px solid black; position: relative;">
+                        <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%);">
+                            <h2 style="color: #4dd7fa; text-align: left; margin-left: 100px;">
+                                <b>BLOODBORNE</b>
+                            </h2>
+                            <h3 style="color: white; margin-bottom: 40px; text-align: left; margin-left: 100px;">PRECIO:
+                                45.99€</h3>
+                            <button type="submit"
+                                style="cursor: pointer;background-color: #4dd7fa; display: block; margin-left: 100px; margin-bottom: 80px; padding: 15px 30px;"><b>AÑADIR
+                                    AL CARRITO</b></button>
+                        </div>
+                        <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+                            <img style="width: 49vh; height: 65vh; border-radius: 40px; margin-right: 28px; cursor: pointer;"
+                                src="/Contenido/PlayStation/bloodborne.png" alt="Imagen 2">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </subsection>
+        <subsection id="novedades">
+            <h2>NOVEDADES</h2>
+            <div class="wrapperXP">
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/ea-sports-fc-24-pc.png"
+                            alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>EA Sports FC 24</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>3/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button><b>Añadir al carrito</b></button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/persona5royal.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Persona 5 Royal</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 39.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/ratchetandclank.jpg" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Ratchet and Clank</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 59.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/residentevil4.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>Resident Evil 4</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 49.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="cardXP">
+                    <div class="posterXP"><img src="/Contenido/PlayStation/valhalla.png" alt="Location Unknown">
+                    </div>
+                    <div class="detailsXP">
+                        <h1>AC Valhalla</h1>
+                        <div class="ratingXP">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5/5</span>
+                        </div>
+                        <span id="precio"><b>Precio: 29.95€</b></span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </subsection>
+    </section>
+    <footer style="margin-top: 120px;">
+        <div id="contenidoFooterPrimero">
+            <p><b>SUSCRÍBETE A LA NEWSLETTER</b></p>
+            <button type="submit" style="background-color: #4dd7fa;"><b>Enviar</b></button>
+            <input type="text" placeholder="Introduce tu email...">
+        </div>
+        <div id="tablaFooter">
+            <table>
+                <tr>
+                    <th>
+                        <p><b><a href="quienessomos.html">SOBRE NOSOTROS</a></b></p>
+                    </th>
+                    <th>
+                        <p><b>REDES SOCIALES</b></p>
+                    </th>
+                    <th>
+                        <p><b>TÉRMINOS LEGALES</b></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                    <td>
+                        <img src="../Contenido/Index/logotwitter.png" width="20%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoinstagram.png" width="18%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoyoutube.png" width="20%" style="padding: 5px;">
+                    </td>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                </tr>
+            </table>
+    </footer>
+    <script>
+        window.onload = function () {
+            // Obtener el valor del parámetro de consulta "seccion" de la URL
+            var params = new URLSearchParams(window.location.search);
+            var seccionId = params.get('seccion');
+
+            // Mostrar la sección correspondiente
+            if (seccionId) {
+                mostrarContenido(seccionId);
+            }
+        };
+
+        function mostrarContenido(seccionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // Mostrar la sección seleccionada si no está visible
+            var seccion = document.getElementById(seccionId);
+            if (seccion && getComputedStyle(seccion).display === 'none') {
+                seccion.style.display = 'block';
+            }
+        }
+    </script>
+    <script src="redirecciones.js"></script>
+
+</body>
+
+</html>

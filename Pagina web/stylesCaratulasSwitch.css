@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+
+.wrapperSwitch {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.cardSwitch {
+    position: relative;
+    width: 30vh;
+    height: 48vh;
+    background: transparent;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: -10px 10px 0px rgba(33, 33, 33, 1), -20px 20px 0px rgba(33, 33, 33, 0.7), -30px 30px 0px rgba(33, 33, 33, 0.4), -40px 40px 0px rgba(33, 33, 33, 0.1);
+}
+
+.posterSwitch {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.posterSwitch::before {
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: .3s;
+}
+
+.cardSwitch:hover .posterSwitch::before {
+    bottom: 0;
+}
+
+.posterSwitch img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.cardSwitch:hover .posterSwitch img {
+    transform: scale(1.1);
+}
+
+.detailsSwitch {
+    text-align: center;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 1.5em 1.5em 2em;
+    background: #000a;
+    backdrop-filter: blur(16px) saturate(120%);
+    transition: .3s;
+    color: #fff;
+    z-index: 2;
+}
+
+.cardSwitch:hover .detailsSwitch {
+    bottom: 0;
+}
+
+.detailsSwitch h1,
+.detailsSwitch h2 {
+    font-weight: 700;
+}
+
+.detailsSwitch h1 {
+    font-size: 1.0em;
+    margin-bottom: 5px;
+}
+
+.detailsSwitch h2 {
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.detailsSwitch .ratingSwitch {
+    position: relative;
+    margin-bottom: 15px;
+    gap: .25em;
+    justify-content: space-around;
+}
+
+.detailsSwitch button {
+    margin-top: 15px;
+    background-color: #4dd7fa;
+    font-family: "Poppins";
+    padding: 10px 20px;
+    font-size: 13px;
+    max-width: 200px; /* Ajusta el ancho máximo del botón */
+    border: 1px solid #4dd7fa;
+    cursor: pointer;
+}
+
+
+.detailsSwitch .ratingSwitch i {
+    color: #e3c414;
+}
+
+.detailsSwitch .ratingSwitch span {
+    margin-left: 0.25em;
+}
+
+.detailsSwitch .ratingSwitch #precio {
+    margin-bottom: 10px
+}
+
+.detailsSwitch .tags {
+    display: flex;
+    gap: .375em;
+    margin-bottom: .875em;
+    font-size: .85em;
+}
+
+.detailsSwitch .tags span {
+    padding: .35rem .65rem;
+    color: #fff;
+    border: 1.5px solid rgba(255 255 255 / 0.4);
+    border-radius: 4px;
+    border-radius: 50px;
+}

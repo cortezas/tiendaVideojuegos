@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=McLaren" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="stylesIndex.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css'>
+    <link rel="stylesheet" href="stylesCaratulasSwitch.css">
+    <link rel="stylesheet" href="stylesCaratulasXP.css">
+    <script src="comprobarLogin.js" type="module"></script>
+    <script src="slider.js" type="module"></script>
+    <script src="carrito.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Las redirecciones a login tienen que cambiar porque aún no se ha establecido el JS correspondiente-->
+    <header>
+        <div class="logo-container">
+            <img src="../Contenido/Index/logo.png" id="logo">
+            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+        </div>
+        <div class="header-buttons">
+            <input type="text" placeholder="&#128269; Buscar">
+            <button class="icon-button" id="avatar"><img src="../Contenido/Index/avatar.png" alt="Avatar"></button>
+            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png"
+                    alt="Cesta"></button>
+        </div>
+    </header>
+    <nav>
+        <table id="nav">
+            <tr style="cursor: pointer;">
+                <th onclick="redireccionarNav('merchandising')">MERCHANDISING</th>
+                <th onclick="redireccionarNav('switch')">SWITCH</th>
+                <th onclick="redireccionarNav('pc')">PC</th>
+                <th onclick="redireccionarNav('xbox')">XBOX</th>
+                <th onclick="redireccionarNav('playstation')">PLAYSTATION</th>
+            </tr>
+        </table>
+    </nav>
+    <!--Slider con algunos juegos en oferta-->
+    <section id="slider">
+        <div class="gallery-container">
+            <figure class="gallery-item">
+                <img src="../Contenido/Index/BANNER2.png" alt="Imagen 1">
+            </figure>
+            <figure class="gallery-item">
+                <img src="../Contenido/Index/banner1.png" alt="Imagen 2">
+            </figure>
+            <figure class="gallery-item">
+                <img src="../Contenido/Index/banner3.png" alt="Imagen 3">
+            </figure>
+        </div>
+        <nav class="gallery-navigation">
+            <button class="nav-button prev-button"><span>&#60;</span></button>
+            <button class="nav-button next-button"><span>&#62;</span></button>
+        </nav>
+    </section>
+    <!--Seccion de novedades principales de la pagina web-->
+    <section id="novedades" style="margin-bottom: 70px; margin-top: 70px;">
+        <h2 style="padding-top: 40px;">NOVEDADES SWITCH</h2>
+        <div class="wrapperSwitch">
+            <div class="cardSwitch">
+                <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/marioodyssey.jpg" alt="Location Unknown">
+                </div>
+                <div class="detailsSwitch">
+                    <h1>Super Mario Odyssey</h1>
+                    <div class="ratingSwitch">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.2/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 49.95€</b></span>
+                    <button><b>Añadir al carrito</b></button>
+                </div>
+            </div>
+            <div class="cardSwitch">
+                <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/splatoon_3.jpg" alt="Location Unknown">
+                </div>
+                <div class="detailsSwitch">
+                    <h1>Splatoon 3</h1>
+                    <div class="ratingSwitch">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>3/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 29.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="cardSwitch">
+                <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/pokemonpurpura.png"
+                        alt="Location Unknown">
+                </div>
+                <div class="detailsSwitch">
+                    <h1>Pokemon Púrpura</h1>
+                    <div class="ratingSwitch">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.0/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 29.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="cardSwitch">
+                <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/pokemonescarlata.png"
+                        alt="Location Unknown">
+                </div>
+                <div class="detailsSwitch">
+                    <h1>Pokemon Escarlata</h1>
+                    <div class="ratingSwitch">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.2/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 29.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="cardSwitch">
+                <div class="posterSwitch"><img src="/Contenido/Nintendo Switch/Metroid_Prime_Remasteres.png"
+                        alt="Location Unknown">
+                </div>
+                <div class="detailsSwitch">
+                    <h1>Metroid Prime Rem.</h1>
+                    <div class="ratingSwitch">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 39.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Seccion de reservas con las últimas novedades en videojuegos-->
+    <section id="reservas" style="margin-bottom: 70px;">
+        <h2>RESERVAS</h2>
+        <div class="wrapperXP">
+            <div class="cardXP">
+                <div class="posterXP"><img src="/Contenido/Xbox/diabloiv.jpg" alt="Location Unknown">
+                </div>
+                <div class="detailsXP">
+                    <h1>Diablo IV</h1>
+                    <div class="ratingXP">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>3/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 59.95€</b></span>
+                    <button><b>Añadir al carrito</b></button>
+                </div>
+            </div>
+            <div class="cardXP">
+                <div class="posterXP"><img src="/Contenido/Xbox/likeadragon.jpg" alt="Location Unknown">
+                </div>
+                <div class="detailsXP">
+                    <h1>Infinite Wealth</h1>
+                    <div class="ratingXP">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 42.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="cardXP">
+                <div class="posterXP"><img src="/Contenido/Xbox/persona3remake.jpg" alt="Location Unknown">
+                </div>
+                <div class="detailsXP">
+                    <h1>Persona 3 Remake</h1>
+                    <div class="ratingXP">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 53.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="cardXP">
+                <div class="posterXP"><img src="/Contenido/PlayStation/finalfantasyvii.png" alt="Location Unknown">
+                </div>
+                <div class="detailsXP">
+                    <h1>F.F. VII: Rebirth</h1>
+                    <div class="ratingXP">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.5/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 69.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="cardXP">
+                <div class="posterXP"><img src="/Contenido/PlayStation/residentevil4.png" alt="Location Unknown">
+                </div>
+                <div class="detailsXP">
+                    <h1>Resident Evil 4</h1>
+                    <div class="ratingXP">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5/5</span>
+                    </div>
+                    <span id="precio"><b>Precio: 39.95€</b></span>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Sección con algunos objetos de merchandising-->
+    <section id="merchandisingSection" style="padding: 26px;">
+        <table>
+            <tr>
+                <td style="width: 30%; vertical-align: middle;">
+                    <div>
+                        <h2>EL MEJOR <br> MERCHANDISING</h2>
+                        <button type="submit" style="cursor: pointer;"
+                            onclick="redireccionarNav('merchandising')"><b>VER SELECCIÓN</b></button>
+                    </div>
+                </td>
+                <td>
+                    <div class="image-container2">
+                        <img src="../Contenido/Merchandising/kirby.png">
+                        <div class="overlay">
+                            <button style="margin-right: 57%; margin-top: 20%;">Añadir al carrito</button>
+                        </div>
+                        <div class="miniTitulosDiv" style="color: white;">
+                            <h3 id="miniTitulos">Peluche Kirby 32 cm</h3>
+                            <span id="precio">Precio: <b>14.95€</b></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="image-container2">
+                        <img src="../Contenido/Merchandising/yoshi.png">
+                        <div class="overlay">
+                            <button style="margin-right: 57%; margin-top: 20%;">Añadir al carrito</button>
+                        </div>
+                        <div class="miniTitulosDiv" style="color: white;">
+                            <h3 id="miniTitulos">Peluche Yoshi 20 cm</h3>
+                            <span id="precio">Precio: <b>9.5€</b></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="image-container2" style="color: white;">
+                        <img src="../Contenido/Merchandising/vaporeon.png">
+                        <div class="overlay">
+                            <button style="margin-right: 57%; margin-top: 20%;">Añadir al carrito</button>
+                        </div>
+                        <div class="miniTitulosDiv" style="color: white;">
+                            <h3 id="miniTitulos">Funko Pop Vaporeon</h3>
+                            <span id="precio">Precio: <b>14.95€</b></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="image-container2">
+                        <img src="../Contenido/Merchandising/hercules.png">
+                        <div class="overlay">
+                            <button style="margin-right: 57%; margin-top: 20%;">Añadir al carrito</button>
+                        </div>
+                        <div class="miniTitulosDiv" style="color: white;">
+                            <h3 id="miniTitulos">Funko Pop Hercules</h3>
+                            <span id="precio">Precio: <b>12.95€</b></span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <div id="contenidoFooterPrimero">
+            <p><b>SUSCRÍBETE A LA NEWSLETTER</b></p>
+            <button type="submit" style="background-color: #4dd7fa;"><b>Enviar</b></button>
+            <input type="text" placeholder="Introduce tu email...">
+        </div>
+        <div id="tablaFooter">
+            <table>
+                <tr>
+                    <th>
+                        <p><b><a href="quienessomos.html">SOBRE NOSOTROS</a></b></p>
+                    </th>
+                    <th>
+                        <p><b>REDES SOCIALES</b></p>
+                    </th>
+                    <th>
+                        <p><b>TÉRMINOS LEGALES</b></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                    <td>
+                        <img src="../Contenido/Index/logotwitter.png" width="20%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoinstagram.png" width="18%" style="padding: 5px;">
+                        <img src="../Contenido/Index/logoyoutube.png" width="20%" style="padding: 5px;">
+                    </td>
+                    <td>
+                        <p>"Lorem ipsum dolor sit amet, consec..."</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+    <script src="redirecciones.js"></script>
+</body>
+
+</html>
