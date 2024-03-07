@@ -7,5 +7,5 @@ function redireccionarCesta() {
 }
 
 function redireccionarInicio() {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }

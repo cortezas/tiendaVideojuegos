@@ -6,16 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=McLaren" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="stylesIndex.css">
+    <link rel="stylesheet" href="Pagina web/stylesIndex.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css'>
-    <link rel="stylesheet" href="stylesCaratulasSwitch.css">
-    <link rel="stylesheet" href="stylesCaratulasXP.css">
-    <script src="comprobarLogin.js" type="module"></script>
-    <script src="slider.js" type="module"></script>
-    <script src="carrito.js" type="module"></script>
+    <link rel="stylesheet" href="Pagina web/stylesCaratulasSwitch.css">
+    <link rel="stylesheet" href="Pagina web/stylesCaratulasXP.css">
+    <script src="Pagina web/slider.js" type="module"></script>
+    <script src="Pagina web/carrito.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Document</title>
+    <script>
+        function redireccionarNav2(seccionId) {
+            // Redirigir a la página secciones copy.html con el identificador de la sección como parámetro de consulta
+            window.location.href = "Pagina web/secciones.html?seccion=" + seccionId;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var usuario = localStorage.getItem("usuario");
+            var avatarBtn = document.getElementById("avatar");
+
+            if (usuario) {
+                avatarBtn.addEventListener("click", function () {
+                    window.location.href = "Pagina web/cliente.html";
+                });
+            } else {
+                // Si no hay usuario, redirigir a la página de inicio de sesión
+                avatarBtn.addEventListener("click", function () {
+                    window.location.href = "Pagina web/login.html";
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -23,23 +44,23 @@
     <header>
         <div class="logo-container">
             <img src="../Contenido/Index/logo.png" id="logo">
-            <h1 onclick="redireccionarInicio()">The Gaming Room</h1>
+            <h1 onclick="window.location.href='index.html'">The Gaming Room</h1>
         </div>
         <div class="header-buttons">
             <input type="text" placeholder="&#128269; Buscar">
             <button class="icon-button" id="avatar"><img src="../Contenido/Index/avatar.png" alt="Avatar"></button>
-            <button class="icon-button" id="cart" onclick="redireccionarCesta()"><img src="../Contenido/Index/cesta.png"
-                    alt="Cesta"></button>
+            <button class="icon-button" id="cart" onclick="window.location.href='Pagina web/cesta.html'"><img
+                    src="../Contenido/Index/cesta.png" alt="Cesta"></button>
         </div>
     </header>
     <nav>
         <table id="nav">
             <tr style="cursor: pointer;">
-                <th onclick="redireccionarNav('merchandising')">MERCHANDISING</th>
-                <th onclick="redireccionarNav('switch')">SWITCH</th>
-                <th onclick="redireccionarNav('pc')">PC</th>
-                <th onclick="redireccionarNav('xbox')">XBOX</th>
-                <th onclick="redireccionarNav('playstation')">PLAYSTATION</th>
+                <th onclick="redireccionarNav2('merchandising')">MERCHANDISING</th>
+                <th onclick="redireccionarNav2('switch')">SWITCH</th>
+                <th onclick="redireccionarNav2('pc')">PC</th>
+                <th onclick="redireccionarNav2('xbox')">XBOX</th>
+                <th onclick="redireccionarNav2('playstation')">PLAYSTATION</th>
             </tr>
         </table>
     </nav>
@@ -254,7 +275,7 @@
                     <div>
                         <h2>EL MEJOR <br> MERCHANDISING</h2>
                         <button type="submit" style="cursor: pointer;"
-                            onclick="redireccionarNav('merchandising')"><b>VER SELECCIÓN</b></button>
+                            onclick="redireccionarNav2('merchandising')"><b>VER SELECCIÓN</b></button>
                     </div>
                 </td>
                 <td>
@@ -343,7 +364,7 @@
             </table>
         </div>
     </footer>
-    <script src="redirecciones.js"></script>
+    <script src="Pagina web/redirecciones.js"></script>
 </body>
 
 </html>
